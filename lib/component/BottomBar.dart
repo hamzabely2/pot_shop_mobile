@@ -16,8 +16,8 @@ class _BottomBarState extends State<BottomBar> {
   int _selectedIndex = 0;
   final List<Widget> _pages = [
     Home(),
-    Cart(),
     Create(),
+    Cart(),
     Profile(),
   ];
 
@@ -66,15 +66,16 @@ final _navBarItems = [
     selectedColor: Colors.black,
   ),
   SalomonBottomBarItem(
-    icon: const Icon(Icons.star),
-    title: const Text("Create"),
+    icon: Image.asset('assets/images/icon.png', width: 35,),
+    title: const Text("Nous"),
     selectedColor: Colors.black,
   ),
   SalomonBottomBarItem(
-    icon: const Icon(Icons.shopping_basket),
-    title: const Text("Cart"),
+    icon: const Icon(Icons.card_membership),
+    title: const Text("panier"),
     selectedColor: Colors.black,
   ),
+
 
   SalomonBottomBarItem(
     icon: const Icon(Icons.person),

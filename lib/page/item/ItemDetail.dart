@@ -68,21 +68,21 @@ class ItemDetail extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child : Center (
-              child: ElevatedButton(
-                onPressed: () {
-                  // Action lorsque le bouton est pressé
-                },
-
+              child:
+              ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                   
+                  foregroundColor: Colors.white, backgroundColor: Colors.black, // Couleur du texte
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(6), // Bord arrondi de 6px
+                  ),
                 ),
+                onPressed: () {
+                  // Action à effectuer lorsque le bouton est pressé
+                  // Par exemple, ajouter l'article au panier
+                },
+                child: Text('Ajouter au panier'),
+              )
 
-                child: Text('Ajouter au panier',
-                style : TextStyle(
-                  color: Colors.black,
-                )
-                ),
-              ),
               ),
             ),
           ],

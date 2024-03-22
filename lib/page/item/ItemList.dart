@@ -59,11 +59,11 @@ class _ItemListState extends State<ItemList> {
             },
             child: Card(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center, // Centrage vertical
-                crossAxisAlignment: CrossAxisAlignment.center, // Centrage horizontal
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Column(
-                    crossAxisAlignment: CrossAxisAlignment.center, // Centrage horizontal
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
                         items[index].name,
@@ -71,21 +71,21 @@ class _ItemListState extends State<ItemList> {
                           fontWeight: FontWeight.bold,
                           fontSize: 16,
                         ),
-                        textAlign: TextAlign.center, // Alignement central
+                        textAlign: TextAlign.center,
                       ),
                       Text(
                         'Price: \$${items[index].price.toString()}',
                         style: TextStyle(
                           color: Colors.grey,
                         ),
-                        textAlign: TextAlign.center, // Alignement central
+                        textAlign: TextAlign.center,
                       ),
                     ],
                   ),
-                  if (items[index].images.isNotEmpty) // Vérifiez si la liste d'images n'est pas vide
+                  if (items[index].images.isNotEmpty && items[index].images[0]['imageData'] != null)
                     Expanded(
                       child: Image.memory(
-                        base64Decode(items[index].images[0]['imageData']),
+                        base64Decode(items[index].images[0]['imageData']), // Convertir les données en byte en image
                         fit: BoxFit.cover,
                       ),
                     ),
